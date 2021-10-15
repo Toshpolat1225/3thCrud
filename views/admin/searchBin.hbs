@@ -1,0 +1,25 @@
+<h1>salom</h1>
+{{#if students.length}}
+<div class="row">
+  {{#each students}}
+  <div class="col-sm-3" style="margin: 20px;">
+    <div class="card" style="width: 18rem;">
+      <img src="/images/{{img}}" class="card-img-top" alt="{{name}}" />
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5> <br>
+        <hr>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{price}}</li>
+      </ul>
+      <div class="card-body d-flex justify-content-between">
+        <a href="/admin/students/edit/{{id}}" class="card-link">Edit</a>
+        <a href="/admin/students/delete/{{id}}" class="card-link">Delete</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{else}}
+<h2>students is empty</h2>
+{{/if}}

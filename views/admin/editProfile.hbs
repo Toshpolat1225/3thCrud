@@ -1,0 +1,140 @@
+<div class="register-box m-auto w-auto">
+  <div class="register-logo">
+    <a href="/admin"><b>{{admin.name}}</b></a>
+  </div>
+
+  <div class="card m-auto" style="width: 750px;">
+    <div class="card-body register-card-body">
+      <p class="login-box-msg">Edit a membership</p>
+      <form action="/admin/editProfile/{{admin._id}}" method="POST" enctype="multipart/form-data">  {{!-- ----------------------- --}}
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Логин"
+            name="login"
+            id="login"
+            value="{{admin.login}}"
+            required
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Имя"
+            name="name"
+            id="name"
+            value="{{admin.name}}"
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Phone"
+            name="phone"
+            id="phone"
+            value="{{admin.phone}}"
+            
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-phone-square-alt"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Телеграм"
+            name="telegram"
+            id="telegram"
+            value="{{admin.telegram}}"
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fab fa-telegram-plane"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Инстаграм"
+            name="instagram"
+            id="instagram"
+            value="{{admin.instagram}}"
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fab fa-instagram"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="Пароль"
+            required
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="file"
+            class="form-control"
+            name="avatar"
+            id="avatar"
+            placeholder="Аватар"
+
+          />
+           <input
+            type="hidden"
+            class="form-control"
+            name="_id"
+            id="_id"
+            placeholder="id"
+            value="{{admin._id}}"
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user-circle"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+            >Update</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
